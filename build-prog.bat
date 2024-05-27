@@ -1,0 +1,1 @@
+g++ -o pmcb main.cpp src/*.cpp lib/*.cpp

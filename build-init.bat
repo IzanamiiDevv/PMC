@@ -1,1 +1,1 @@
-g++ -o pmci init.cpp src/cli.cpp
+g++ -o pmci init.cpp src/*.cpp lib/*.cpp

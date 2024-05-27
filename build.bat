@@ -1,1 +1,3 @@
-g++ -o pmc main.cpp src/*.cpp
+@echo off
+
+build-init && build-prog
