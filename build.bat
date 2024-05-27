@@ -1,3 +1,3 @@
 @echo off
 
-build-prog
+g++ -o pmc.h.exe  main.help.cpp lib/*.cpp
