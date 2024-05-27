@@ -3,8 +3,23 @@
 #include "incl/cli.h"
 
 int main(int argc, char* argv[]) {
-    int mode = CLI::scan_int("-param", argc, argv);
-    std::string project =  CLI::scan_string("-proj", argc, argv);
+    int mode;
+    std::string project;
+    try
+    {
+        mode = CLI::scan_int("-param", argc, argv);
+        project =  CLI::scan_string("-proj", argc, argv);
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << "Error: Empty Arguments Program cant Execute" << '\n';
+        return 0;
+    }
+
+    if(mode == 0) {
+        std::cerr << "Error: Project mode not Initialized" << std::endl;
+        return 1;
+    }
 
     if(project == "") {
         std::cerr << "Error: Empty Project Name is Not Valid" << std::endl;
@@ -13,7 +28,7 @@ int main(int argc, char* argv[]) {
 
     switch (mode)
     {
-    case 0:
+    case 2:
         std::cout << "NEW LOCAL PROJECT";
         break;
     case 1:

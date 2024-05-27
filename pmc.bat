@@ -6,26 +6,32 @@ cd C:\Users\rosar\Documents\pmc
 
 if "%1"=="h" (
     pmc.h -on %2
+    exit /b
 )
 
 if "%1"=="help" (
     pmc.h -on %2
+    exit /b
 )
 
 if "%1"=="goto" (
     echo %2
+    exit /b
 )
 
 if "%1"=="scan" (
     echo %2
+    exit /b
 )
 
 if "%1"=="del" (
     echo %2
+    exit /b
 )
 
 if "%1"=="code" (
     echo %2
+    exit /b
 )
 
 if "%1"=="new" (
@@ -40,7 +46,7 @@ if "%1"=="new" (
             set mode=1
             shift
         ) else if /i "%~2"=="-local" (
-            set mode=0
+            set mode=2
             shift
         ) else (
             goto :endloop
@@ -50,6 +56,7 @@ if "%1"=="new" (
 
     :endloop
     pmc.n -param %mode% -proj %project%
+    exit /b
 )
 
 endlocal
