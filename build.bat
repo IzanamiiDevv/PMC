@@ -1,0 +1,1 @@
+g++ -o pmc main.cpp src/*.cpp

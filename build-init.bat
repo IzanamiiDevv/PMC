@@ -1,0 +1,1 @@
+g++ -o pmci init.cpp src/cli.cpp
