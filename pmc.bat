@@ -1,34 +1,22 @@
 @echo off
-setlocal enabledelayedexpansion
+setlocal
 
-set /a sum=0
 
-rem Loop through all the arguments
-:loop
-if "%~1" neq "" (
-    rem Check if the argument starts with "-x"
-    if /i "%~1"=="-x" (
-        set x=%2
-        shift
-        shift
-    ) else (
-        rem Check if the argument starts with "-y"
-        if /i "%~1"=="-y" (
-            set y=%2
-            shift
-            shift
-        ) else (
-            rem If argument doesn't match any option, exit the loop
-            goto :endloop
-        )
-    )
-    goto :loop
+if "%1"=="goto" (
+    echo %2
 )
 
-:endloop
-rem Calculate the sum of x and y
-set /a sum=x+y
+if "%1"=="scan" (
+    echo %2
+)
 
-cd %UserProfile%\OneDrive\Documents && pmcb
+if "%1"=="del" (
+    echo %2
+)
+
+if "%1"=="code" (
+    echo %2
+)
+
 
 endlocal

@@ -1,3 +1,3 @@
 @echo off
 
-build-init && build-prog
+build-prog

@@ -1,1 +1,0 @@
-g++ -o pmci init.cpp src/*.cpp lib/*.cpp
