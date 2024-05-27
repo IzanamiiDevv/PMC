@@ -26,3 +26,8 @@ single arg command:
 
 multi arg command:
     new
+
+status:
+    finished > Project that is Done
+    ongoing > Project that you working on
+    unfinished > Project that has left due to new project was created

@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "incl/cli.h"
+#include "incl/cmd.new.h"
 
 int main(int argc, char* argv[]) {
     int mode;
@@ -12,7 +13,7 @@ int main(int argc, char* argv[]) {
     }
     catch(const std::exception& e)
     {
-        std::cerr << "Error: Empty Arguments Program cant Execute" << '\n';
+        std::cerr << "Error: Empty Arguments Program cant Execute" << std::endl;
         return 0;
     }
 
@@ -29,11 +30,13 @@ int main(int argc, char* argv[]) {
     switch (mode)
     {
     case 2:
-        std::cout << "NEW LOCAL PROJECT";
+        std::cout << "NEW LOCAL PROJECT" << '\n';
+        ACTION_NEW::test();
         break;
     case 1:
-        std::cout << "NEW GITHUB PROJECT";
+        std::cout << "NEW GITHUB PROJECT" << '\n';
         break;
+        ACTION_NEW::test();
     }
 
     return 0;

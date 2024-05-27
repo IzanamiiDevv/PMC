@@ -1,3 +1,3 @@
 @echo off
 
-g++ -o pmc.h.exe  main.help.cpp lib/*.cpp && g++ -o pmc.n.exe  main.new.cpp lib/*.cpp src/*.cpp
+g++ -o pmc.h.exe  main.help.cpp src/*.cpp && g++ -shared -o cmdnew.dll lib/cmd.new.cpp -Wl,--out-implib,libcmdnew.a && g++ -o pmc.n.exe main.new.cpp src/*.cpp -L . -l cmdnew
