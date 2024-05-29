@@ -31,12 +31,12 @@ int main(int argc, char* argv[]) {
     {
     case 2:
         std::cout << "NEW LOCAL PROJECT" << '\n';
-        ACTION_NEW::test();
+        ACTION_NEW::create_local(project.c_str());
         break;
     case 1:
         std::cout << "NEW GITHUB PROJECT" << '\n';
+        ACTION_NEW::create_github(project.c_str());
         break;
-        ACTION_NEW::test();
     }
 
     return 0;

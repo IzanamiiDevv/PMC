@@ -11,6 +11,8 @@ extern "C" {
     namespace ACTION_NEW
     {
         void test();
+        void create_github(const char* arg);
+        void create_local(const char* arg);
     }
 }
 
