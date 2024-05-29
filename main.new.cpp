@@ -2,6 +2,7 @@
 #include <string>
 #include "incl/cli.h"
 #include "incl/cmd.new.h"
+#include "incl/error.h"
 
 int main(int argc, char* argv[]) {
     int mode;
@@ -13,17 +14,17 @@ int main(int argc, char* argv[]) {
     }
     catch(const std::exception& e)
     {
-        std::cerr << "Error: Empty Arguments Program cant Execute" << std::endl;
+        Error::onArgument("Empty Values");
         return 0;
     }
 
     if(mode == 0) {
-        std::cerr << "Error: Project mode not Initialized" << std::endl;
+        Error::onArgument("Project mode not Initialized");
         return 1;
     }
 
     if(project == "") {
-        std::cerr << "Error: Empty Project Name is Not Valid" << std::endl;
+        Error::onArgument("Empty Project Name is Not Valid");
         return 1;
     }
 
