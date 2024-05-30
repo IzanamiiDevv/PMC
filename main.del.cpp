@@ -20,7 +20,6 @@ int main(int argc, char* argv[]) {
             if(row[0] == name) {
                 isHere = true;
                 status = row[2];
-                
             }
         }
 

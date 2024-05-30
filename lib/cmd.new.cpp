@@ -24,15 +24,25 @@ namespace ACTION_NEW
 
         strcpy(cmd , command);
         strcat(cmd, arg);
+        
+        std::string temp;
+        for(int i = arglen; i > 0; i--) {
+            if(arg[i] == '/') break;
+            temp += arg[i];
+        }
 
-        ACTION_NEW::new_project(arg, "github");
-        //Test
-        return;
+        std::string projectName;
+        for(int i = temp.size() - 1; i > 0; i--) {
+            if(temp[i] == '.') break;
+            projectName += temp[i];
+        }
+
+        ACTION_NEW::new_project(projectName, "github");
+
         try
         {
             std::string result = System::exec(cmd);
             std::cout << result << std::endl;
-            std::cout << "Test" << std::endl;
         }
         catch(const std::exception& e)
         {

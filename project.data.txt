@@ -1,5 +1,0 @@
-Ga;github;unfinished
-Go;github;unfinished
-Test1;github;unfinished
-Test2;github;unfinished
-Test6;github;unfinished
