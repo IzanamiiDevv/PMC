@@ -6,4 +6,6 @@ Test2;github;unfinished
 Test3;github;finished
 Test5;github;finished
 Test6;github;unfinished
-Test7;github;ongoing
+Test7;github;finished
+Hello;github;finished
+Test200;github;ongoing

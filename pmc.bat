@@ -20,7 +20,7 @@ if "%1"=="goto" (
 )
 
 if "%1"=="scan" (
-    pmc.scan -w %2
+    pmc.scan -x %2 -y %3
     exit /b
 )
 

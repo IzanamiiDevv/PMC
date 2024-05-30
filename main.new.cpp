@@ -15,7 +15,7 @@ int main(int argc, char* argv[]) {
     catch(const std::exception& e)
     {
         Error::onArgument("Empty Values");
-        return 0;
+        return 1;
     }
 
     if(mode == 0) {
