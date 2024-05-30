@@ -38,11 +38,31 @@ namespace ACTION_NEW
         {
             Error::onExecution(e.what());
         }
-        
     }
 
     void create_local(const char* arg) {
+        const char* command = "cd projects && mkdir ";
+
+        size_t cmdlen = strlen(command);
+        size_t arglen = strlen(arg);
+
+        char* cmd = new char[cmdlen + arglen + 1];
+
+        strcpy(cmd , command);
+        strcat(cmd, arg);
+
         ACTION_NEW::new_project(arg, "local");
+
+        try
+        {
+            std::string result = System::exec(cmd);
+            std::cout << result << std::endl;
+        }
+        catch(const std::exception& e)
+        {
+            Error::onExecution(e.what());
+        }
+
     }
 
     void new_project(std::string name, std::string mode) {
