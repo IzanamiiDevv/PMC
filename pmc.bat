@@ -25,7 +25,7 @@ if "%1"=="scan" (
 )
 
 if "%1"=="del" (
-    echo %2
+    pmc.del -prj %2
     exit /b
 )
 

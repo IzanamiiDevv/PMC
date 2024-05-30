@@ -1,2 +1,9 @@
-PMC;github;ongoing
-PMC;local;finished
+Ga;github;unfinished
+Go;github;unfinished
+Test;github;finished
+Test1;github;unfinished
+Test2;github;unfinished
+Test3;github;finished
+Test5;github;finished
+Test6;github;unfinished
+Test7;github;ongoing

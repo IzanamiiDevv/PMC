@@ -1,7 +1,10 @@
 .vscode
 test.bat
 
+projects/*
+
 cmdnew.dll
 libcmdnew.a
 pmc.h.exe
 pmc.n.exe
+pmc.del.exe

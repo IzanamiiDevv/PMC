@@ -31,3 +31,10 @@ status:
     finished > Project that is Done
     ongoing > Project that you working on
     unfinished > Project that has left due to new project was created
+
+
+Gagawin ko bukas:
+
+1.Change error to dll
+2.adjust some code
+3.more
