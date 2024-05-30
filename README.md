@@ -35,6 +35,6 @@ status:
 
 Gagawin ko bukas:
 
-1.Change error to dll
+1.Fix Del Method to Log if Project is not yet Done
 2.adjust some code
 3.more
