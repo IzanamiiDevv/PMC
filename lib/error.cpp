@@ -10,4 +10,8 @@ namespace Error
     void onExecution(const char* txt) {
         std::cerr << "Execution Error: " << txt << std::endl;
     }
+
+    void onRunTime(const char* txt) {
+        std::cerr << "Run Time Error: " << txt << std::endl;
+    }
 }

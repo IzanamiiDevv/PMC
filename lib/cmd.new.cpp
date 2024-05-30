@@ -36,7 +36,7 @@ namespace ACTION_NEW
         }
         catch(const std::exception& e)
         {
-            std::cerr << e.what() << '\n';
+            Error::onExecution(e.what());
         }
         
     }
@@ -62,7 +62,7 @@ namespace ACTION_NEW
             std::string response;
             bool loop = true;
             do {
-                std::cout << "There is Current Project Ongoing Would you like to mark it as Finished?" << std::endl;
+                Error::onRunTime("There is Current Project Ongoing Would you like to mark it as Finished?");
                 std::cout << "(y/n): ";
                 std::cin >> response;
                 std::cout << std::endl;

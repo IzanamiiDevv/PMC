@@ -20,7 +20,7 @@ if "%1"=="goto" (
 )
 
 if "%1"=="scan" (
-    echo %2
+    pmc.scan -w %2
     exit /b
 )
 
