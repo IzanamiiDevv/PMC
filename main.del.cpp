@@ -68,6 +68,28 @@ int main(int argc, char* argv[]) {
         return 0;
     }
 
+    auto data = PD::read();
+
+    for (const auto& row : data) {
+            if(row[2] == "finished") {
+                size_t cmdlen = strlen(command);
+                size_t arglen = strlen(name.c_str());
+
+                char* cmd = new char[cmdlen + arglen + 1];
+
+                strcpy(cmd , command);
+                strcat(cmd, row[0].c_str());
+
+                try {
+                    std::string result = System::exec(cmd);
+                    std::cout << result << std::endl;
+                }
+                catch(const std::exception& e) {
+                    Error::onExecution(e.what());
+                }
+            }
+        }
+
     PD::removeStatus("finished");
     std::cout << "Projects Successfully Deleted" << std::endl;
     return 0;

@@ -7,6 +7,7 @@
 int main(int argc, char* argv[]) {
     int mode;
     std::string project;
+
     try
     {
         mode = CLI::scan_int("-param", argc, argv);
