@@ -39,6 +39,7 @@ int main(int argc, char* argv[]) {
     }
     if(x != "" && y == "-cmd") {
         bool isFind = false;
+
         for (const auto& row : data) {
             for (const auto& col : row) {
                 if (col == x) {
@@ -47,6 +48,7 @@ int main(int argc, char* argv[]) {
                 }
             }
         }
+        
         if (!isFind) {
             Error::onRunTime("Can't find query");
         }
