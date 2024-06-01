@@ -2,6 +2,9 @@
 Project Manager CLI: Help you to organize your Projects Directory
 
 
+pmc -v
+pmc -credits
+
 pmc h
 pmc help
 
@@ -38,3 +41,13 @@ Gagawin ko bukas:
 1.Fix Del Method to Log if Project is not yet Done
 2.adjust some code
 3.more
+
+
+Todo:
+    mark
+    code
+    scan -web
+    new and create
+    help and h
+    -v
+    -credits

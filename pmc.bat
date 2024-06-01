@@ -1,9 +1,23 @@
 @echo off
+
+::::::::::::::::::::::::::::::::::::::::
+:: Project Name:    Project Manager CLI
+:: Author:          IzanamiiDevv
+:: Licens:          MIT
+:: Copyright (c) 2024 IzanamiiDevv. All rights reserved.
+::::::::::::::::::::::::::::::::::::::::
+
+:: Start
 setlocal
 
+::::::::::::::::::::::::::::::::::::::::
 
+:: Set Path to the Projects Directory
 cd C:\Users\rosar\Documents\pmc
 
+::::::::::::::::::::::::::::::::::::::::
+
+:: Help
 if "%1"=="h" (
     pmc.h -on %2
     exit /b
@@ -14,26 +28,41 @@ if "%1"=="help" (
     exit /b
 )
 
+::::::::::::::::::::::::::::::::::::::::
+
+:: Go to
 if "%1"=="goto" (
     echo %2
     exit /b
 )
 
+::::::::::::::::::::::::::::::::::::::::
+
+:: Scan
 if "%1"=="scan" (
     pmc.scan -x %2 -y %3
     exit /b
 )
 
+::::::::::::::::::::::::::::::::::::::::
+
+:: Delete
 if "%1"=="del" (
     pmc.del -prj %2
     exit /b
 )
 
+::::::::::::::::::::::::::::::::::::::::
+
+:: Code
 if "%1"=="code" (
     echo %2
     exit /b
 )
 
+::::::::::::::::::::::::::::::::::::::::
+
+:: New
 if "%1"=="new" (
     set mode=0
     set project=%3
@@ -59,6 +88,7 @@ if "%1"=="new" (
     exit /b
 )
 
+::::::::::::::::::::::::::::::::::::::::
 
-
+:: End
 endlocal
