@@ -1,14 +1,9 @@
 .vscode
 test.bat
+test.cpp
 
 projects/*
 
-cmdnew.dll
-libcmdnew.a
-pmc.h.exe
-pmc.n.exe
-pmc.del.exe
-liberror.a
-error.dll
-pmc.scan.exe
-pmc.mark.exe
+*.exe
+*.a
+*.dll
