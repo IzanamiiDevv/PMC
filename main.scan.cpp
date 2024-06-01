@@ -12,6 +12,7 @@
 
 void printScan(std::string name, std::string mode, std::string status);
 std::string read_file(const std::string &path);
+std::string read_file_txt(const std::string &path);
 void viewWeb(const char* query);
 void calcColWidth(const std::vector<std::vector<std::string>>& data, std::vector<size_t>& widths);
 void displayTable(const std::vector<std::vector<std::string>>& data);
@@ -116,6 +117,16 @@ void viewWeb(const char* query){
         }
     });
 
+    svr.Get("/data", [](const httplib::Request &, httplib::Response &res) {
+        std::string content = read_file_txt("project.data.txt");
+        if (!content.empty()) {
+            res.set_content(content, "text/plain");
+        } else {
+            res.status = 404;
+            res.set_content("Empty Data", "text/plain");
+        }
+    });
+
     if(query == "") {
         std::cout << "Click this Link http://localhost:8080" << std::endl;
     }else {
@@ -163,4 +174,19 @@ std::string read_file(const std::string &path) {
     std::stringstream buffer;
     buffer << file.rdbuf();
     return buffer.str();
+}
+
+std::string read_file_txt(const std::string &path) {
+    std::ifstream infile(path);
+    std::string data;
+
+    if(infile.is_open()) {
+        std::string line;
+        while(std::getline(infile,line)) {
+            data += line + '\n';
+        }
+        infile.close();
+    }
+
+    return data;
 }
