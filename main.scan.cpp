@@ -5,6 +5,8 @@
 #include <vector>
 #include <iomanip>
 #include <algorithm>
+#include <thread>
+#include <atomic>
 #include "incl/httplib.h"
 #include "incl/cli.h"
 #include "incl/error.h"
@@ -16,6 +18,9 @@ std::string read_file_txt(const std::string &path);
 void viewWeb(const char* query);
 void calcColWidth(const std::vector<std::vector<std::string>>& data, std::vector<size_t>& widths);
 void displayTable(const std::vector<std::vector<std::string>>& data);
+void shutdown_server(httplib::Server &svr);
+
+std::atomic<bool> server_running(true);
 
 
 int main(int argc, char* argv[]) {
@@ -84,7 +89,12 @@ int main(int argc, char* argv[]) {
     return 0;
 }
 
-void viewWeb(const char* query){
+void shutdown_server(httplib::Server &svr) {
+    svr.stop();
+    server_running = false;
+}
+
+void viewWeb(const char* query) {
     httplib::Server svr;
 
     svr.Get("/", [](const httplib::Request &req, httplib::Response &res) {
@@ -127,12 +137,30 @@ void viewWeb(const char* query){
         }
     });
 
+    svr.Post("/shutdown", [&](const httplib::Request &, httplib::Response &res) {
+        std::thread([&svr]() {
+            std::this_thread::sleep_for(std::chrono::milliseconds(100));
+            shutdown_server(svr);
+        }).detach();
+        res.set_content("Shutting down", "text/plain");
+    });
+
     if(query == "") {
-        std::cout << "Click this Link http://localhost:8080" << std::endl;
-    }else {
-        std::cout << "Click this Link http://localhost:8080" << "?" << query << std::endl;
+        std::cout << "Click this Link http://localhost:5500" << std::endl;
+    } else {
+        std::cout << "Click this Link http://localhost:5500?" << query << std::endl;
     }
-    svr.listen("localhost", 8080);
+
+    std::thread server_thread([&svr]() {
+        svr.listen("localhost", 5500);
+    });
+
+    while (server_running) {
+        std::this_thread::sleep_for(std::chrono::milliseconds(100));
+    }
+
+    server_thread.join();
+    std::cout << "Server stopped." << std::endl;
 }
 
 void printScan(std::string name, std::string mode, std::string status) {

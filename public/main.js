@@ -12,3 +12,7 @@ getData(data => {
         console.log(row);
     }
 });
+
+window.onbeforeunload = function() {
+    navigator.sendBeacon('/shutdown');
+};

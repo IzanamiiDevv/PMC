@@ -64,7 +64,7 @@ if "%1"=="del" (
 
 :: Code
 if "%1"=="code" (
-    echo %2
+    pmc.code -p %2
     exit /b
 )
 
