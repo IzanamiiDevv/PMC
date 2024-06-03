@@ -6,10 +6,72 @@
 
 The Project Manager CLI is a powerful tool designed to help you efficiently manage your project directories. Whether you need to create, delete, mark, or open projects, this command-line interface provides simple and intuitive commands to streamline your workflow. Below are the available commands and their usage.
 
-Click here to [Download](https://youtube.com)
+
+# Project Manager CLI
+
+**Help you to organize your Projects Directory**
+
+## Overview
+
+The Project Manager CLI is a powerful tool designed to help you efficiently manage your project directories. Whether you need to create, delete, mark, or open projects, this command-line interface provides simple and intuitive commands to streamline your workflow.
+
+## Installation
+
+1. **Clone the repository:**
+    ```bash
+    git clone https://github.com/your_username/project-manager-cli.git
+    ```
+
+2. **Navigate to the project directory:**
+    ```bash
+    cd project-manager-cli
+    ```
+
+3. **Set up the environment variable:**
+
+    - Locate the project files in your OneDrive Documents folder:  
+      `%userprofile%\OneDrive\Documents\PMC`
+
+    - Add this path to your system's environment variables:
+      - **Windows:**
+        1. Open Control Panel.
+        2. Go to System and Security > System.
+        3. Click on "Advanced system settings" on the left panel.
+        4. In the System Properties window, click on the "Environment Variables" button.
+        5. Under System Variables, find the "Path" variable and click on Edit.
+        6. Add the path `%userprofile%\OneDrive\Documents\PMC` to the list of paths. Click OK to save.
+
+### or
+
+1. **Install in Release:**
+
+    Download it on Release tab 
+    Click here to [Download](https://youtube.com)
+
+2. **Extract the zip file**
+
+    - Go to Downloads and Extract the zip file
+    - Open it and copy the Folder Inside
+    - Paste it in OneDrive Document
+
+3. **Set up the environment variable:**
+
+    - Locate the project files in your OneDrive Documents folder:  
+      `%userprofile%\OneDrive\Documents\PMC`
+
+    - Add this path to your system's environment variables:
+      - **Windows:**
+        1. Open Control Panel.
+        2. Go to System and Security > System.
+        3. Click on "Advanced system settings" on the left panel.
+        4. In the System Properties window, click on the "Environment Variables" button.
+        5. Under System Variables, find the "Path" variable and click on Edit.
+        6. Add the path `%userprofile%\OneDrive\Documents\PMC` to the list of paths. Click OK to save.
 
 
-### path: %userprofile%\OneDrive\Documents
+## Usage
+
+For usage instructions and available commands, refer to the [Project Commands](#Commands:) section in the README or the project documentation.
 
 ## Commands:
 - [mark](#mark)
