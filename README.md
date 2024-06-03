@@ -46,7 +46,7 @@ The Project Manager CLI is a powerful tool designed to help you efficiently mana
 1. **Install in Release:**
 
     Download it on Release tab 
-    Click here to [Download](https://youtube.com)
+    Click here to [Download](https://github.com/IzanamiiDevv/PMC/releases/)
 
 2. **Extract the zip file**
 
