@@ -6,7 +6,7 @@
 
 The Project Manager CLI is a powerful tool designed to help you efficiently manage your project directories. Whether you need to create, delete, mark, or open projects, this command-line interface provides simple and intuitive commands to streamline your workflow. Below are the available commands and their usage.
 
-## Download
+### Download
 Click here to [Download](https://youtube.com)
 
 ## Commands:
