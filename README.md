@@ -96,7 +96,8 @@ Create a new project folder.
 
 
 # Credentials
-Author: IzanamiiDevv
-Language: C++
-License: MIT License
+
+Author: IzanamiiDevv </br>
+Language: C++ </br>
+License: MIT License </br>
 Copyright (c) 2024 IzanamiiDevv. All rights reserved.
