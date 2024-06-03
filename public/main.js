@@ -1,3 +1,7 @@
+window.onbeforeunload = function() {
+    navigator.sendBeacon('/shutdown');
+};
+
 async function getData(callback){
     const response = await fetch("/data");
     const txt = await response.text();
@@ -12,7 +16,3 @@ getData(data => {
         console.log(row);
     }
 });
-
-window.onbeforeunload = function() {
-    navigator.sendBeacon('/shutdown');
-};
