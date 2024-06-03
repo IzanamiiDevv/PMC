@@ -13,7 +13,7 @@ setlocal
 ::::::::::::::::::::::::::::::::::::::::
 
 :: Set Path to the Projects Directory
-cd C:\Users\rosar\Documents\pmc
+cd %userprofile%\OneDrive\Documents\pmc
 
 ::::::::::::::::::::::::::::::::::::::::
 

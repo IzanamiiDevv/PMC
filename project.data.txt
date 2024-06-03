@@ -1,2 +1,0 @@
-Test;local;unfinished
-Hek;local;ongoing
