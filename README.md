@@ -1,12 +1,3 @@
-# Project Manager CLI - PMC
-
-**Help you to organize your Projects Directory**
-
-## Overview
-
-The Project Manager CLI is a powerful tool designed to help you efficiently manage your project directories. Whether you need to create, delete, mark, or open projects, this command-line interface provides simple and intuitive commands to streamline your workflow. Below are the available commands and their usage.
-
-
 # Project Manager CLI
 
 **Help you to organize your Projects Directory**
